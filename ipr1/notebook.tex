@@ -281,14 +281,15 @@
 
     
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}61}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+{\color{incolor}In [{\color{incolor}18}]:} \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+         \PY{k+kn}{import} \PY{n+nn}{math}
 \end{Verbatim}
 
 
     \subsection{Задание 2}\label{ux437ux430ux434ux430ux43dux438ux435-2}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}62}]:} \PY{n}{A} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}
+{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{A} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}
                  \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}
                  \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{]}\PY{p}{,}
                  \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}
@@ -297,7 +298,7 @@
          \PY{n}{b} \PY{o}{=} \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{]}
          \PY{n}{c} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{12}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{6}\PY{p}{,} \PY{l+m+mi}{20}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{18}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{7}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{20}\PY{p}{]}
          \PY{n}{y\PYZus{}0} \PY{o}{=} \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{]}
-         \PY{n}{J\PYZus{}B} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{]}
+         \PY{n}{J\PYZus{}B} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{]}
          \PY{n}{delta} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{y\PYZus{}0}\PY{p}{,} \PY{n}{A}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n}{c}
          \PY{n}{m}\PY{p}{,} \PY{n}{n} \PY{o}{=} \PY{n}{A}\PY{o}{.}\PY{n}{shape}
          \PY{n}{optimal\PYZus{}solution} \PY{o}{=} \PY{k+kc}{None}
@@ -305,7 +306,7 @@
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}63}]:} \PY{k}{class} \PY{n+nc}{OptFounException}\PY{p}{(}\PY{n+ne}{Exception}\PY{p}{)}\PY{p}{:}
+{\color{incolor}In [{\color{incolor}23}]:} \PY{k}{class} \PY{n+nc}{OptFounException}\PY{p}{(}\PY{n+ne}{Exception}\PY{p}{)}\PY{p}{:}
              \PY{k}{def} \PY{n+nf}{\PYZus{}\PYZus{}init\PYZus{}\PYZus{}}\PY{p}{(}\PY{n+nb+bp}{self}\PY{p}{,} \PY{n}{opt\PYZus{}x}\PY{p}{)}\PY{p}{:}
                  \PY{n+nb+bp}{self}\PY{o}{.}\PY{n}{opt\PYZus{}x} \PY{o}{=} \PY{n}{opt\PYZus{}x}
                  
@@ -317,7 +318,7 @@
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}64}]:} \PY{k}{def} \PY{n+nf}{find\PYZus{}get\PYZus{}el\PYZus{}ind}\PY{p}{(}\PY{n}{arr}\PY{p}{,} \PY{n}{el}\PY{p}{)}\PY{p}{:}
+{\color{incolor}In [{\color{incolor}24}]:} \PY{k}{def} \PY{n+nf}{find\PYZus{}get\PYZus{}el\PYZus{}ind}\PY{p}{(}\PY{n}{arr}\PY{p}{,} \PY{n}{el}\PY{p}{)}\PY{p}{:}
              \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{arr}\PY{p}{)}\PY{p}{)}\PY{p}{:}
                  \PY{k}{if} \PY{n}{arr}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{==} \PY{n}{el}\PY{p}{:}
                      \PY{k}{return} \PY{n}{i}
@@ -327,7 +328,7 @@
          
          \PY{k}{def} \PY{n+nf}{get\PYZus{}sigma\PYZus{}da}\PY{p}{(}\PY{n}{mu}\PY{p}{,} \PY{n}{delta}\PY{p}{,} \PY{n}{J\PYZus{}N}\PY{p}{)}\PY{p}{:}
              \PY{n}{sigma} \PY{o}{=} \PY{p}{[}\PY{n}{math}\PY{o}{.}\PY{n}{inf}\PY{p}{]} \PY{o}{*} \PY{n+nb}{len}\PY{p}{(}\PY{n}{delta}\PY{p}{)}
-             
+             \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mu[J\PYZus{}N]: }\PY{l+s+si}{\PYZob{}mu[J\PYZus{}N]\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
              \PY{k}{if} \PY{n}{np}\PY{o}{.}\PY{n}{all}\PY{p}{(}\PY{n}{mu}\PY{p}{[}\PY{n}{J\PYZus{}N}\PY{p}{]} \PY{o}{\PYZgt{}}\PY{o}{=} \PY{l+m+mi}{0}\PY{p}{)}\PY{p}{:}
                  \PY{k}{raise} \PY{n}{IncompatibleRestrictionsException}
              
@@ -352,7 +353,27 @@
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}65}]:} \PY{k}{def} \PY{n+nf}{dual\PYZus{}sm\PYZus{}iteration}\PY{p}{(}\PY{n}{y\PYZus{}0}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{,} \PY{n}{delta}\PY{p}{)}\PY{p}{:}
+{\color{incolor}In [{\color{incolor}29}]:} \PY{l+m+mf}{3e\PYZhy{}17} \PY{o}{\PYZlt{}} \PY{l+m+mi}{10}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}29}]:} True
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}30}]:} \PY{k}{def} \PY{n+nf}{normalize\PYZus{}delta}\PY{p}{(}\PY{n}{delta}\PY{p}{)}\PY{p}{:}
+             \PY{n}{ndelta} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{delta}\PY{p}{)}
+             \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{ndelta}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                 \PY{k}{if} \PY{n+nb}{abs}\PY{p}{(}\PY{n}{ndelta}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)} \PY{o}{\PYZlt{}} \PY{l+m+mf}{3e\PYZhy{}17}\PY{p}{:}
+                     \PY{n}{ndelta}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{0}
+                 
+             \PY{k}{return} \PY{n}{ndelta}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}33}]:} \PY{k}{def} \PY{n+nf}{dual\PYZus{}sm\PYZus{}iteration}\PY{p}{(}\PY{n}{y\PYZus{}0}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{,} \PY{n}{delta}\PY{p}{)}\PY{p}{:}
              \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{y\PYZus{}0: }\PY{l+s+si}{\PYZob{}y\PYZus{}0\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
              \PY{n}{J\PYZus{}N} \PY{o}{=} \PY{n}{get\PYZus{}J\PYZus{}N}\PY{p}{(}\PY{n}{J\PYZus{}B}\PY{p}{)}
              \PY{n}{A\PYZus{}B} \PY{o}{=} \PY{n}{A}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{]}
@@ -366,8 +387,8 @@
              \PY{n}{mu} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{B}\PY{p}{[}\PY{n}{k}\PY{p}{,} \PY{p}{:}\PY{p}{]}\PY{p}{,} \PY{n}{A}\PY{p}{)}
              
              \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{J\PYZus{}B: }\PY{l+s+si}{\PYZob{}J\PYZus{}B\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-             \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{A\PYZus{}B: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{ }\PY{l+s+si}{\PYZob{}A\PYZus{}B\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{end}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-             \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{B: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{ }\PY{l+s+si}{\PYZob{}B\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{end}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{A\PYZus{}B: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{ }\PY{l+s+si}{\PYZob{}A\PYZus{}B\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{end}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+             \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{B: }\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{ }\PY{l+s+si}{\PYZob{}B\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{end}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
              \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{k: }\PY{l+s+si}{\PYZob{}k\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
              \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{j\PYZus{}k: }\PY{l+s+si}{\PYZob{}j\PYZus{}k\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
              \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{mu: }\PY{l+s+si}{\PYZob{}mu\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
@@ -375,6 +396,7 @@
              \PY{n}{sigma\PYZus{}0}\PY{p}{,} \PY{n}{new\PYZus{}j\PYZus{}k} \PY{o}{=} \PY{n}{get\PYZus{}sigma\PYZus{}da}\PY{p}{(}\PY{n}{mu}\PY{p}{,} \PY{n}{delta}\PY{p}{,} \PY{n}{J\PYZus{}N}\PY{p}{)}
              \PY{n}{y\PYZus{}new} \PY{o}{=} \PY{n}{y\PYZus{}0} \PY{o}{+} \PY{n}{sigma\PYZus{}0} \PY{o}{*} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{mu}\PY{p}{[}\PY{n}{J\PYZus{}B}\PY{p}{]}\PY{p}{,} \PY{n}{B}\PY{p}{)}
              \PY{n}{delta\PYZus{}new} \PY{o}{=} \PY{n}{delta} \PY{o}{+} \PY{n}{sigma\PYZus{}0} \PY{o}{*} \PY{n}{mu}
+             \PY{n}{delta\PYZus{}new} \PY{o}{=} \PY{n}{normalize\PYZus{}delta}\PY{p}{(}\PY{n}{delta\PYZus{}new}\PY{p}{)}
              \PY{n}{J\PYZus{}B\PYZus{}new} \PY{o}{=} \PY{n+nb}{list}\PY{p}{(}\PY{n+nb}{set}\PY{p}{(}\PY{n}{J\PYZus{}B}\PY{p}{)} \PY{o}{\PYZhy{}} \PY{n+nb}{set}\PY{p}{(}\PY{p}{[}\PY{n}{j\PYZus{}k}\PY{p}{]}\PY{p}{)}\PY{p}{)} \PY{o}{+} \PY{p}{[}\PY{n}{new\PYZus{}j\PYZus{}k}\PY{p}{]}
              
              \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{sigma\PYZus{}0: }\PY{l+s+si}{\PYZob{}sigma\PYZus{}0\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
@@ -390,7 +412,7 @@
 алгоритма}\label{ux438ux442ux435ux440ux430ux446ux438ux438-ux430ux43bux433ux43eux440ux438ux442ux43cux430}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}66}]:} \PY{n}{new\PYZus{}y}\PY{p}{,} \PY{n}{new\PYZus{}J\PYZus{}B}\PY{p}{,} \PY{n}{new\PYZus{}delta} \PY{o}{=} \PY{n}{dual\PYZus{}sm\PYZus{}iteration}\PY{p}{(}\PY{n}{y\PYZus{}0}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{,} \PY{n}{delta}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}34}]:} \PY{n}{new\PYZus{}y}\PY{p}{,} \PY{n}{new\PYZus{}J\PYZus{}B}\PY{p}{,} \PY{n}{new\PYZus{}delta} \PY{o}{=} \PY{n}{dual\PYZus{}sm\PYZus{}iteration}\PY{p}{(}\PY{n}{y\PYZus{}0}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{,} \PY{n}{delta}\PY{p}{)}
          \PY{k}{try}\PY{p}{:}
              \PY{k}{while} \PY{k+kc}{True}\PY{p}{:} 
                  \PY{n}{new\PYZus{}y}\PY{p}{,} \PY{n}{new\PYZus{}J\PYZus{}B}\PY{p}{,} \PY{n}{new\PYZus{}delta} \PY{o}{=} \PY{n}{dual\PYZus{}sm\PYZus{}iteration}\PY{p}{(}\PY{n}{new\PYZus{}y}\PY{p}{,} \PY{n}{new\PYZus{}J\PYZus{}B}\PY{p}{,} \PY{n}{new\PYZus{}delta}\PY{p}{)}
@@ -404,66 +426,64 @@
 
     \begin{Verbatim}[commandchars=\\\{\}]
 y\_0: [-3, -2, -1]
-J\_B: [2, 4, 6]
+J\_B: [1, 3, 5]
 A\_B: 
- [[ 1  1  0]
- [ 1  5 -1]
- [ 0  4  1]]
-
+ [[-1 -7  0]
+ [ 2  0  1]
+ [ 1  1  3]]
 B: 
- [[ 1.125 -0.125 -0.125]
- [-0.125  0.125  0.125]
- [ 0.5   -0.5    0.5  ]]
-
-k: 0
-j\_k: 2
-mu: [-1.875 -1.5    1.    -8.     0.    -0.5    0.     1.5  ]
-sigma\_0: -0.0
-y\_new: [-3. -2. -1.]
-delta\_new: [1. 0. 1. 0. 1. 0. 8. 3.]
-J\_B\_new: [4, 6, 1]
-\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-y\_0: [-3. -2. -1.]
-J\_B: [4, 6, 1]
-A\_B: 
- [[ 1  0 -1]
- [ 5 -1  2]
- [ 4  1  1]]
-
-B: 
- [[ 0.25        0.08333333  0.08333333]
- [-0.25       -0.41666667  0.58333333]
- [-0.75        0.08333333  0.08333333]]
-
+ [[-0.02777778  0.58333333 -0.19444444]
+ [-0.13888889 -0.08333333  0.02777778]
+ [ 0.05555556 -0.16666667  0.38888889]]
 k: 1
-j\_k: 6
-mu: [ 2.75        0.         -0.66666667  2.33333333  0.          1.33333333
-  1.         -2.        ]
-sigma\_0: 1.4999999999999998
-y\_new: [-3.375 -2.625 -0.125]
-delta\_new: [5.1250000e+00 0.0000000e+00 0.0000000e+00 3.5000000e+00 1.0000000e+00
- 2.0000000e+00 9.5000000e+00 4.4408921e-16]
+j\_k: 3
+mu: [ 6.38888889e-01 -1.04083409e-17 -2.22222222e-01  1.00000000e+00
+ -4.44444444e-01  1.38777878e-17  1.11111111e-01 -6.66666667e-01]
+mu[J\_N]: [ 0.63888889 -0.22222222 -0.44444444  0.11111111 -0.66666667]
+sigma\_0: 2.2500000000000004
+y\_new: [-3.3125 -2.1875 -0.9375]
+delta\_new: [2.43750000e+00 0.00000000e+00 5.00000000e-01 2.25000000e+00
+ 0.00000000e+00 3.12250226e-17 8.25000000e+00 1.50000000e+00]
+J\_B\_new: [1, 5, 4]
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+y\_0: [-3.3125 -2.1875 -0.9375]
+J\_B: [1, 5, 4]
+A\_B: 
+ [[-1  0  1]
+ [ 2  1  5]
+ [ 1  3  4]]
+B: 
+ [[-0.6875  0.1875 -0.0625]
+ [-0.1875 -0.3125  0.4375]
+ [ 0.3125  0.1875 -0.0625]]
+k: 1
+j\_k: 5
+mu: [ 2.0625  0.     -0.5     1.75    0.      1.      0.75   -1.5   ]
+mu[J\_N]: [ 2.0625 -0.5     1.75    0.75   -1.5   ]
+sigma\_0: 0.9999999999999998
+y\_new: [-3.5 -2.5 -0.5]
+delta\_new: [4.50000000e+00 0.00000000e+00 0.00000000e+00 4.00000000e+00
+ 0.00000000e+00 1.00000000e+00 9.00000000e+00 2.22044605e-16]
 J\_B\_new: [1, 4, 2]
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
-y\_0: [-3.375 -2.625 -0.125]
+y\_0: [-3.5 -2.5 -0.5]
 J\_B: [1, 4, 2]
 A\_B: 
  [[-1  1  1]
  [ 2  5  1]
  [ 1  4  0]]
-
 B: 
  [[-0.5    0.5   -0.5  ]
  [ 0.125 -0.125  0.375]
  [ 0.375  0.625 -0.875]]
-
 k: 1
 j\_k: 4
 mu: [ 0.625  0.     0.    -0.5    1.     1.     0.5    0.   ]
-sigma\_0: 6.999999999999999
+mu[J\_N]: [ 0.625 -0.5    1.     0.5    0.   ]
+sigma\_0: 7.999999999999999
 y\_new: [-2.5 -3.5  2.5]
-delta\_new: [9.5000000e+00 0.0000000e+00 0.0000000e+00 0.0000000e+00 8.0000000e+00
- 9.0000000e+00 1.3000000e+01 4.4408921e-16]
+delta\_new: [9.50000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 8.00000000e+00 9.00000000e+00 1.30000000e+01 2.22044605e-16]
 J\_B\_new: [1, 2, 3]
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 y\_0: [-2.5 -3.5  2.5]
@@ -472,16 +492,15 @@ A\_B:
  [[-1  1 -7]
  [ 2  1  0]
  [ 1  0  1]]
-
 B: 
  [[ 0.25 -0.25  1.75]
  [-0.5   1.5  -3.5 ]
  [-0.25  0.25 -0.75]]
-
 k: 0
 j\_k: 1
 mu: [ 2.25000000e+00  1.00000000e+00 -1.11022302e-16 -4.44089210e-16
   6.00000000e+00  5.00000000e+00  2.00000000e+00  1.00000000e+00]
+mu[J\_N]: [2.25 6.   5.   2.   1.  ]
 Restrictions are incompatible
 
     \end{Verbatim}
@@ -489,57 +508,57 @@ Restrictions are incompatible
     \subsubsection{Задание 3}\label{ux437ux430ux434ux430ux43dux438ux435-3}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}67}]:} \PY{n}{c} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
-         \PY{n}{b} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{14}\PY{p}{,} \PY{l+m+mi}{23}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{]}\PY{p}{)}
-         \PY{n}{A} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}
-                 \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}
-                 \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}
-                 \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}
-             \PY{p}{]}
-         \PY{p}{)}
-         \PY{n}{x\PYZus{}0} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
-         \PY{n}{J\PYZus{}B} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
-         \PY{n}{u\PYZus{}0} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}169}]:} \PY{n}{c} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{9}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{7}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+          \PY{n}{b} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{14}\PY{p}{,} \PY{l+m+mi}{23}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{]}\PY{p}{)}
+          \PY{n}{A} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}
+                  \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}
+                  \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}
+                  \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}
+              \PY{p}{]}
+          \PY{p}{)}
+          \PY{n}{x\PYZus{}0} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+          \PY{n}{J\PYZus{}B} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{]}\PY{p}{)}
+          \PY{n}{u\PYZus{}0} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}68}]:} \PY{k}{def} \PY{n+nf}{get\PYZus{}phi\PYZus{}sense}\PY{p}{(}\PY{n}{z}\PY{p}{,} \PY{n}{x\PYZus{}B}\PY{p}{)}\PY{p}{:}
-             \PY{n}{phi} \PY{o}{=} \PY{p}{[}\PY{n}{math}\PY{o}{.}\PY{n}{inf}\PY{p}{]} \PY{o}{*} \PY{n+nb}{len}\PY{p}{(}\PY{n}{z}\PY{p}{)}
-             \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-                 \PY{k}{if} \PY{n}{z}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{\PYZlt{}} \PY{l+m+mi}{0}\PY{p}{:}
-                     \PY{n}{phi}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}} \PY{n}{x\PYZus{}B}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{/} \PY{n}{z}\PY{p}{[}\PY{n}{i}\PY{p}{]}
-                     
-             \PY{k}{return} \PY{n}{phi}
-         
-         
-         \PY{k}{def} \PY{n+nf}{get\PYZus{}new\PYZus{}x\PYZus{}0\PYZus{}sense}\PY{p}{(}\PY{n}{x\PYZus{}0}\PY{p}{,} \PY{n}{phi\PYZus{}0}\PY{p}{,} \PY{n}{z}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{,} \PY{n}{j\PYZus{}s}\PY{p}{)}\PY{p}{:}
-             \PY{n}{new\PYZus{}x\PYZus{}0} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{x\PYZus{}0}\PY{p}{)}
-             \PY{n}{new\PYZus{}x\PYZus{}0}\PY{p}{[}\PY{n}{j\PYZus{}s}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{0}
-             \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{J\PYZus{}B}\PY{p}{)}\PY{p}{)}\PY{p}{:}
-                 \PY{n}{ind} \PY{o}{=} \PY{n}{J\PYZus{}B}\PY{p}{[}\PY{n}{i}\PY{p}{]}
-                 \PY{n}{x\PYZus{}0}\PY{p}{[}\PY{n}{ind}\PY{p}{]} \PY{o}{+}\PY{o}{=} \PY{n}{phi\PYZus{}0} \PY{o}{*} \PY{n}{z}\PY{p}{[}\PY{n}{i}\PY{p}{]}
-                 
-             \PY{k}{return} \PY{n}{new\PYZus{}x\PYZus{}0}
+{\color{incolor}In [{\color{incolor}170}]:} \PY{k}{def} \PY{n+nf}{get\PYZus{}phi\PYZus{}sense}\PY{p}{(}\PY{n}{z}\PY{p}{,} \PY{n}{x\PYZus{}B}\PY{p}{)}\PY{p}{:}
+              \PY{n}{phi} \PY{o}{=} \PY{p}{[}\PY{n}{math}\PY{o}{.}\PY{n}{inf}\PY{p}{]} \PY{o}{*} \PY{n+nb}{len}\PY{p}{(}\PY{n}{z}\PY{p}{)}
+              \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{z}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                  \PY{k}{if} \PY{n}{z}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{\PYZlt{}} \PY{l+m+mi}{0}\PY{p}{:}
+                      \PY{n}{phi}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{=} \PY{o}{\PYZhy{}} \PY{n}{x\PYZus{}B}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{/} \PY{n}{z}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                      
+              \PY{k}{return} \PY{n}{phi}
+          
+          
+          \PY{k}{def} \PY{n+nf}{get\PYZus{}new\PYZus{}x\PYZus{}0\PYZus{}sense}\PY{p}{(}\PY{n}{x\PYZus{}0}\PY{p}{,} \PY{n}{phi\PYZus{}0}\PY{p}{,} \PY{n}{z}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{,} \PY{n}{j\PYZus{}s}\PY{p}{)}\PY{p}{:}
+              \PY{n}{new\PYZus{}x\PYZus{}0} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{n}{x\PYZus{}0}\PY{p}{)}
+              \PY{n}{new\PYZus{}x\PYZus{}0}\PY{p}{[}\PY{n}{j\PYZus{}s}\PY{p}{]} \PY{o}{=} \PY{l+m+mi}{0}
+              \PY{k}{for} \PY{n}{i} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{J\PYZus{}B}\PY{p}{)}\PY{p}{)}\PY{p}{:}
+                  \PY{n}{ind} \PY{o}{=} \PY{n}{J\PYZus{}B}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                  \PY{n}{x\PYZus{}0}\PY{p}{[}\PY{n}{ind}\PY{p}{]} \PY{o}{+}\PY{o}{=} \PY{n}{phi\PYZus{}0} \PY{o}{*} \PY{n}{z}\PY{p}{[}\PY{n}{i}\PY{p}{]}
+                  
+              \PY{k}{return} \PY{n}{new\PYZus{}x\PYZus{}0}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}69}]:} \PY{n}{J\PYZus{}N} \PY{o}{=} \PY{n}{get\PYZus{}J\PYZus{}N}\PY{p}{(}\PY{n}{J\PYZus{}B}\PY{p}{)}
-         \PY{n}{A\PYZus{}B} \PY{o}{=} \PY{n}{A}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{]}
-         \PY{n}{A\PYZus{}new} \PY{o}{=} \PY{n}{A}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}
-         \PY{n}{z} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{linalg}\PY{o}{.}\PY{n}{inv}\PY{p}{(}\PY{n}{A\PYZus{}B}\PY{p}{)}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
-         \PY{n}{j\PYZus{}s} \PY{o}{=} \PY{n}{J\PYZus{}B}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{z} \PY{o}{\PYZlt{}} \PY{l+m+mi}{0}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{]}
-         \PY{n}{phi} \PY{o}{=} \PY{n}{get\PYZus{}phi\PYZus{}sense}\PY{p}{(}\PY{n}{z}\PY{p}{,} \PY{n}{x\PYZus{}0}\PY{p}{[}\PY{n}{J\PYZus{}B}\PY{p}{]}\PY{p}{)}
-         \PY{n}{phi\PYZus{}0} \PY{o}{=} \PY{n+nb}{min}\PY{p}{(}\PY{n}{phi}\PY{p}{)}
-         \PY{n}{new\PYZus{}x\PYZus{}0} \PY{o}{=} \PY{n}{get\PYZus{}new\PYZus{}x\PYZus{}0\PYZus{}sense}\PY{p}{(}\PY{n}{x\PYZus{}0}\PY{p}{,} \PY{n}{phi\PYZus{}0}\PY{p}{,} \PY{n}{z}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{,} \PY{n}{j\PYZus{}s}\PY{p}{)}
-         
-         
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{z: }\PY{l+s+si}{\PYZob{}z\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{j\PYZus{}s: }\PY{l+s+si}{\PYZob{}j\PYZus{}s\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{phi: }\PY{l+s+si}{\PYZob{}phi\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{phi\PYZus{}0: }\PY{l+s+si}{\PYZob{}phi\PYZus{}0\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
-         \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{new\PYZus{}x\PYZus{}0: }\PY{l+s+si}{\PYZob{}new\PYZus{}x\PYZus{}0\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}171}]:} \PY{n}{J\PYZus{}N} \PY{o}{=} \PY{n}{get\PYZus{}J\PYZus{}N}\PY{p}{(}\PY{n}{J\PYZus{}B}\PY{p}{)}
+          \PY{n}{A\PYZus{}B} \PY{o}{=} \PY{n}{A}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{]}
+          \PY{n}{A\PYZus{}new} \PY{o}{=} \PY{n}{A}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}
+          \PY{n}{z} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{np}\PY{o}{.}\PY{n}{linalg}\PY{o}{.}\PY{n}{inv}\PY{p}{(}\PY{n}{A\PYZus{}B}\PY{p}{)}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+          \PY{n}{j\PYZus{}s} \PY{o}{=} \PY{n}{J\PYZus{}B}\PY{p}{[}\PY{n}{np}\PY{o}{.}\PY{n}{where}\PY{p}{(}\PY{n}{z} \PY{o}{\PYZlt{}} \PY{l+m+mi}{0}\PY{p}{)}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{]}
+          \PY{n}{phi} \PY{o}{=} \PY{n}{get\PYZus{}phi\PYZus{}sense}\PY{p}{(}\PY{n}{z}\PY{p}{,} \PY{n}{x\PYZus{}0}\PY{p}{[}\PY{n}{J\PYZus{}B}\PY{p}{]}\PY{p}{)}
+          \PY{n}{phi\PYZus{}0} \PY{o}{=} \PY{n+nb}{min}\PY{p}{(}\PY{n}{phi}\PY{p}{)}
+          \PY{n}{new\PYZus{}x\PYZus{}0} \PY{o}{=} \PY{n}{get\PYZus{}new\PYZus{}x\PYZus{}0\PYZus{}sense}\PY{p}{(}\PY{n}{x\PYZus{}0}\PY{p}{,} \PY{n}{phi\PYZus{}0}\PY{p}{,} \PY{n}{z}\PY{p}{,} \PY{n}{J\PYZus{}B}\PY{p}{,} \PY{n}{j\PYZus{}s}\PY{p}{)}
+          
+          
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{z: }\PY{l+s+si}{\PYZob{}z\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{j\PYZus{}s: }\PY{l+s+si}{\PYZob{}j\PYZus{}s\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{phi: }\PY{l+s+si}{\PYZob{}phi\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{phi\PYZus{}0: }\PY{l+s+si}{\PYZob{}phi\PYZus{}0\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+          \PY{n+nb}{print}\PY{p}{(}\PY{n}{f}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{new\PYZus{}x\PYZus{}0: }\PY{l+s+si}{\PYZob{}new\PYZus{}x\PYZus{}0\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -553,12 +572,21 @@ new\_x\_0: [0 0 0 4 0 2 0 0 0]
     \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}53}]:} \PY{n}{new\PYZus{}x\PYZus{}0}
+{\color{incolor}In [{\color{incolor}175}]:} \PY{o}{\PYZhy{}}\PY{l+m+mf}{1.11022302e\PYZhy{}16}  \PY{o}{==} \PY{l+m+mi}{0}
 \end{Verbatim}
 
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}53}]:} array([0, 0, 0, 4, 0, 2, 0, 0, 0])
+{\color{outcolor}Out[{\color{outcolor}175}]:} False
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}177}]:} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mf}{1.11022302e\PYZhy{}16} \PY{p}{]}\PY{p}{)} \PY{o}{==} \PY{l+m+mi}{0}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}177}]:} array([False])
 \end{Verbatim}
             
 
